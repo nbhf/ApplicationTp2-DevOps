@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class BonjourController {
     @GetMapping("/bonjour")
     public String saluer(){
-        return "Bonjour";
+        return "Bonjour! Let's test the trigger";
     }
 }
