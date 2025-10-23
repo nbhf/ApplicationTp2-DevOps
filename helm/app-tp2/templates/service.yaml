@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "app-tp2.fullname" . }}-service-helm
+  labels:
+    app: {{ include "app-tp2.name" . }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: {{ include "app-tp2.name" . }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}

@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: nbhf/application-tp2
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+
+resources: {}
